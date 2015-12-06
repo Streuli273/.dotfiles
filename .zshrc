@@ -15,13 +15,6 @@ compinit
 ####### START #######
 #####################
 
-# THE THINGS
-#aliases
-
-
-#thefuck
-eval $(thefuck --alias)
-
 # ANTIGEN
 
 export ADOTDIR=$HOME/.config/zsh/antigen
@@ -33,6 +26,7 @@ antigen use oh-my-zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle thefuck
 antigen bundle extract
+antigen bundle git
 
 # themes
 antigen theme bhilburn/powerlevel9k powerlevel9k
@@ -50,3 +44,21 @@ export POWERLEVEL9K_TIME_FOREGROUND='239'
 export POWERLEVEL9K_TIME_BACKGROUND='015'
 
 antigen apply
+
+
+# THE THINGS
+#aliases
+alias ls='ls -lh --color=auto'
+alias la='ls -lAh --color=auto'
+unalias l 
+unalias ll
+unalias lsa
+alias mkdir='mkdir -p'
+unalias md
+
+#thefuck
+eval $(thefuck --alias)
+
+#ls colors
+eval $(dircolors -b $HOME/.config/zsh/LS_COLORS)
+
