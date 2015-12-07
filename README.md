@@ -15,6 +15,5 @@ adds `export ZDOTDIR=$HOME/.config/zsh` to `/etc/zsh/zshenv` so zsh dotfiles can
 
 **must run as root**
 
-<br>
 ####link.sh
 sets symlinks of `.config` and `.xinitrc` to `~`
