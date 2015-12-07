@@ -176,9 +176,12 @@ new_window none
 gaps inner 10
 gaps outer 10
 
+workspace 2 gaps outer 150
+
 for_window [class="chrome"] move container to workspace "1: web", workspace "1: web"
-for_window [class="termite"] move container to workspace "2: terms", workspace "2: terms"
-for_window [class="gedit"] move container to workspace "4: docs", workspace "4: docs"
+for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
+for_window [class="Gedit"] move container to workspace "4: docs", workspace "4: docs"
+for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
 
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
 exec --no-startup-id feh --bg-scale ~/media/sunrise.jpg
