@@ -8,7 +8,7 @@ font = inconsolata-g 8
 foreground		= #ffffff
 foreground_bold	= #ffffff
 cursor			= #ffffff
-background		= #161616
+background		= rgba(22, 22, 22, 0.7)
 
 # black
 color0  = #222222
