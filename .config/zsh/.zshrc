@@ -62,3 +62,4 @@ eval $(thefuck --alias)
 #ls colors
 eval $(dircolors -b $HOME/.config/zsh/LS_COLORS)
 
+exit
