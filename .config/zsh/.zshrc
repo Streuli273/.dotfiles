@@ -55,6 +55,7 @@ unalias l
 unalias ll
 unalias lsa
 alias mkdir='mkdir -p'
+alias yaourt='yaourt --noconfirm'
 unalias md
 
 #thefuck

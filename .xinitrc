@@ -37,5 +37,8 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 
-xrandr -s 1400x1050
+setxkbmap gb
+
+xrandr --dpi 165
+
 exec i3
