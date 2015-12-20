@@ -13,7 +13,7 @@ $ ./link.sh
 ####setzshenv.sh
 adds `export ZDOTDIR=$HOME/.config/zsh` to `/etc/zsh/zshenv` so zsh dotfiles can be kept in `~/.config/zsh`
 
-**must run as root**
+**must run through sudo, from user**
 
 ####link.sh
 sets symlinks of `.config` and `.xinitrc` to `~`
