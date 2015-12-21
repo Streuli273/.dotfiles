@@ -17,3 +17,7 @@ adds `export ZDOTDIR=$HOME/.config/zsh` to `/etc/zsh/zshenv` so zsh dotfiles can
 
 ####link.sh
 sets symlinks of `.config` and `.xinitrc` to `~`
+
+####sources
+[dkeg](http://dotshare.it/~dkeg/) on dotshare.it for conky and i3 dots inspiration.
+

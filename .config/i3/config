@@ -184,7 +184,7 @@ for_window [class="chrome"] move container to workspace "1: web", workspace "1: 
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="Gedit"] move container to workspace "4: docs", workspace "4: docs"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
-for_window [class="Steam"] move container to  workspace "5: steam", workspace "5: steam"
+for_window [class="Steam"] move container to  workspace "5: steam"
 for_window [title="Hexcells"] move container to workspace "6: game", workspace "6: game"
 for_window [title="Hexcells Plus"] move container to workspace "6: game", workspace "6: game" 
 
