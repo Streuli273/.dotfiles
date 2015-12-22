@@ -5,7 +5,7 @@ SAVEHIST=3000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/archvm/.zshrc'
+zstyle :compinstall filename '/home/streuli/.config/zsh/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -28,6 +28,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle thefuck
 antigen bundle extract
 antigen bundle git
+antigen bundle rimraf/k
 
 # themes
 antigen theme bhilburn/powerlevel9k powerlevel9k
@@ -50,14 +51,14 @@ antigen apply
 
 # THE THINGS
 #aliases
-alias ls='ls -lh --color=auto'
-alias la='ls -lAh --color=auto'
+alias ls='k -h'
+alias la='k -ah'
 unalias l 
 unalias ll
 unalias lsa
 alias mkdir='mkdir -p'
-alias yaourt='yaourt --noconfirm'
 unalias md
+alias cat=ccat
 
 #thefuck
 eval $(thefuck --alias)
