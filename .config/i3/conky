@@ -39,13 +39,13 @@ TEXT
 {"full_text":"${cpu}%","color":${if_match ${cpu}>25}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
 \
 {"full_text":"temp","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec sensors | grep 'Core 0' | cut -c16-17}C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c16-17}>48}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
+{"full_text":"${exec sensors | grep 'Core 0' | cut -c16-17}°C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c16-17}>48}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
 \
 {"full_text":"speaker","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec amixer get Speaker -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
+{"full_text":"${exec amixer -c 0 get Speaker -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
 {"full_text":"headphone","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec amixer get Headphone -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
+{"full_text":"${exec amixer -c 0 get Headphone -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
 {"full_text":"bat","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${battery_short}","color":${if_match ${battery_percent}>25}"\#eeeeee"${else}"\#bf3f34"${endif},"separator":false,"separator_block_width":10},\
@@ -53,8 +53,14 @@ TEXT
 {"full_text":"net","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${upspeedf wlp1s0}KB up ${downspeedf wlp1s0}KB dwn","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
+{"full_text":"weather","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EGCC temperature 60}°C ${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ EGCC weather 180}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
+\
 {"full_text":"ip","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${addr wlp1s0}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
+\
+{"full_text":"uptime","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"${uptime_short}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
 {"full_text":"time","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${time %a %d.%m}","color":"\#eeeeee","separator":false,"separator_block_width":0},\
