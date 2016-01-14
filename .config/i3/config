@@ -89,11 +89,11 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace 1: web
 bindsym $mod+2 workspace 2: terms
 bindsym $mod+3 workspace 3: media
-bindsym $mod+4 workspace 4: docs
-bindsym $mod+5 workspace 5: steam
-bindsym $mod+6 workspace 6: game
-bindsym $mod+7 workspace 7: misc
-bindsym $mod+8 workspace 8: eight
+bindsym $mod+4 workspace 4: files
+bindsym $mod+5 workspace 5: dev
+bindsym $mod+6 workspace 6: steam
+bindsym $mod+7 workspace 7: game
+bindsym $mod+8 workspace 8: misc
 bindsym $mod+9 workspace 9: nine
 bindsym $mod+0 workspace 10: ten
 
@@ -101,11 +101,11 @@ bindsym $mod+0 workspace 10: ten
 bindsym $mod+Shift+1 move container to workspace 1: web
 bindsym $mod+Shift+2 move container to workspace 2: terms
 bindsym $mod+Shift+3 move container to workspace 3: media
-bindsym $mod+Shift+4 move container to workspace 4: docs
-bindsym $mod+Shift+5 move container to workspace 5: steam
-bindsym $mod+Shift+6 move container to workspace 6: game
-bindsym $mod+Shift+7 move container to workspace 7: misc
-bindsym $mod+Shift+8 move container to workspace 8: eight
+bindsym $mod+Shift+4 move container to workspace 4: files
+bindsym $mod+Shift+5 move container to workspace 5: dev
+bindsym $mod+Shift+6 move container to workspace 6: steam
+bindsym $mod+Shift+7 move container to workspace 7: game
+bindsym $mod+Shift+8 move container to workspace 8: misc
 bindsym $mod+Shift+9 move container to workspace 9: nine
 bindsym $mod+Shift+0 move container to workspace 10: ten
 
@@ -168,11 +168,11 @@ bar {
 	mode dock
 	font pango:inconsolata-g 5
 	colors {
-	      	background #161616
-	      	statusline #605c5a
+	    background #161616
+	   	statusline #605c5a
 		focused_workspace	#161616	#cc5555	#eeeeee
-       		active_workspace	#161616 #161616	#ffffff
-      		inactive_workspace	#161616 #4e4e4e	#ffffff
+  		active_workspace	#161616 #161616	#ffffff
+  		inactive_workspace	#161616 #4e4e4e	#ffffff
 		urgent_workspace  	#161616 #4e4e4e	#ffffff
 	}
 }
@@ -185,23 +185,24 @@ gaps inner 10
 gaps outer 10
 
 #special gaps
-workspace "1: web" gaps outer 0
-workspace "1: web" gaps inner 0
+workspace 1 gaps outer 0
+workspace 1 gaps inner 0
 workspace 2 gaps outer 150
-workspace 5 gaps inner 0
 
 #assign programs to workspaces
 for_window [class="chrome"] move container to workspace "1: web", workspace "1: web"
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
 for_window [class="transmission-gtk"] move container to workspace "3: media", workspace "3: media"
-for_window [title="nano"] move container to workspace "4: docs", workspace "4: docs"
-for_window [class="Steam"] move container to  workspace "5: steam"
-for_window [title="Hexcells"] move container to workspace "6: game", workspace "6: game" 
-for_window [title="Gunpoint"] move container to workspace "6: game", workspace "6: game"
-for_window [title="MiniMetro"] move container to workspace "6: game", workspace "6: game"
-for_window [title="Shattered Pixel Dungeon"] move container to workspace "6: game", workspace "6: game"
-for_window [title="Osmos"] move container to workspace "6: game", workspace "6: game"
+for_window [class="Thunar"] move container to workspace "4: files", workspace "4: files"
+for_window [class="Subl3"] move container to workspace "5: dev", workspace "5: dev"
+for_window [title="nano"] move container to workspace "5: dev", workspace "5: dev"
+for_window [title="Steam"] move container to workspace "6: steam"
+for_window [title="Hexcells"] move container to workspace "7: game", workspace "7: game" 
+for_window [title="Gunpoint"] move container to workspace "7: game", workspace "7: game"
+for_window [title="MiniMetro"] move container to workspace "7: game", workspace "7: game"
+for_window [title="Shattered Pixel Dungeon"] move container to workspace "7: game", workspace "7: game"
+for_window [title="Osmos"] move container to workspace "7: game", workspace "7: game"
 
 #exec compositor and background
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
