@@ -1,0 +1,749 @@
+{
+	"folder_history":
+	[
+	],
+	"last_version": 3083,
+	"last_window_id": 2,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 1013.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							""
+						],
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							"Dart: pub build"
+						],
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							"Dart: dart2js"
+						]
+					],
+					[
+						"Packages/Dart/Support/Dart.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 365.0,
+				"last_filter": "Package Re",
+				"selected_items":
+				[
+					[
+						"Package Re",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 382.0
+			},
+			"console":
+			{
+				"height": 132.0,
+				"history":
+				[
+					"sublime.log_input(True)",
+					"sublime.log_commands(True)",
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Material Theme/Material-Theme-Darker.sublime-theme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Installed Packages/Material Theme/Material-Theme-Darker.sublime-theme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+			],
+			"find":
+			{
+				"height": 70.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"38, 50, 56",
+					"128, 203, 196",
+					"33"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 23.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 214.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "Packages/Dart/Support/Dart.sublime-build",
+			"replace":
+			{
+				"height": 42.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 380.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1880.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/streuli/.config/i3/config",
+					"settings":
+					{
+						"buffer_size": 7962,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/streuli/media/drive/dev/build/batwarn/config.h",
+					"settings":
+					{
+						"buffer_size": 510,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/streuli/.config/zsh/.zshrc",
+					"settings":
+					{
+						"buffer_size": 1613,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/Dart/Support/Dart.sublime-build",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							""
+						],
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							"Dart: pub build"
+						],
+						[
+							"Packages/Dart/Support/Dart.sublime-build",
+							"Dart: dart2js"
+						]
+					],
+					[
+						"Packages/Dart/Support/Dart.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 400.0,
+				"last_filter": "Package Control: ",
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					],
+					[
+						"packa",
+						"Package Control: Install Package"
+					],
+					[
+						"dart",
+						"Dart: Run"
+					],
+					[
+						"package",
+						"Package Control: Install Package"
+					],
+					[
+						"pk",
+						"PackageResourceViewer: Extract Package"
+					],
+					[
+						"Package Con",
+						"Package Control: Install Package"
+					],
+					[
+						"Dart: ",
+						"Dart: Run"
+					],
+					[
+						"Package Re",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 472.0
+			},
+			"console":
+			{
+				"height": 402.0,
+				"history":
+				[
+					"sublime.log_commands(True)",
+					"sublime.log_input(True)",
+					"sublime.log_commands(True)",
+					"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/streuli/.config/i3/battcheck.sh",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+				"/home/streuli/.codeintel/codeintel.log",
+				"/home/streuli/packages.txt",
+				"/home/streuli/Downloads/Untitled map.kml",
+				"/home/streuli/.config/i3/cponfig",
+				"/home/streuli/dev/test.dart",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/dart.sublime-build",
+				"/home/streuli/dev/flutter/my_app/lib/main.dart",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/streuli/.config/i3/config",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Theme - Spacegray/Spacegray Eighties.sublime-theme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/User/Dart - Plugin Settings.sublime-settings",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Material Theme/Material-Theme-Darker.sublime-theme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Installed Packages/Material Theme/Material-Theme-Darker.sublime-theme",
+				"/home/streuli/.dotfiles/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+			],
+			"find":
+			{
+				"height": 38.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"dev",
+					"f2777a",
+					"cc",
+					"2d2d2d",
+					"45, 45, 45",
+					"background",
+					"211, 208, 200",
+					"38, 38, 38",
+					"42, 119, 122]",
+					"242",
+					"30, 30, 30",
+					"38, 50, 56",
+					"128, 203, 196",
+					"33"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/streuli/.config/i3/config",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 7962,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										7961,
+										7961
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content"
+									],
+									"syntax": "Packages/i3 wm/Syntax/i3wm_config.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 3060.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/streuli/media/drive/dev/build/batwarn/config.h",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 510,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										239,
+										239
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content"
+									],
+									"syntax": "Packages/C++/C++.tmLanguage"
+								},
+								"translation.x": -0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/streuli/.config/zsh/.zshrc",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1613,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1338,
+										1338
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content"
+									],
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 765.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 26.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.dart.analyzer":
+			{
+				"height": 215.0
+			},
+			"output.dart.config.check":
+			{
+				"height": 98.0
+			},
+			"output.dart.out":
+			{
+				"height": 242.0
+			},
+			"output.exec":
+			{
+				"height": 214.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "Packages/User/dart.sublime-build",
+			"position": "0,0,0,0,0,20,47,1900,1060,1920,1080",
+			"project": "",
+			"replace":
+			{
+				"height": 48.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 380.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 275.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
