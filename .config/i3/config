@@ -14,7 +14,7 @@ set $mod Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
-
+	
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -145,7 +145,7 @@ bindsym $mod+r mode "resize"
 #my keybinds
 bindsym $mod+d exec rofi -show run -font "inconsolata-g 9" -fg "#ffffff" -bg "#161616" -hlbg "#cc5555" -terminal termite -hide-scrollbar -opacity 80%
 bindsym $mod+x exec ~/.config/i3/i3lock.sh
-bindsym $mod+c exec google-chrome-stable --force-device-scale-factor=1.25
+bindsym $mod+c exec google-chrome-unstable --force-device-scale-factor=1.25
 
 #media keys
 bindsym XF86AudioRaiseVolume exec amixer -c 0 set Speaker 1DB+ && amixer -c 0 set "Speaker Left" on && amixer -c 0 set "Speaker Right" on
@@ -189,7 +189,7 @@ workspace 1 gaps outer 0
 workspace 1 gaps inner 0
 workspace 2 gaps outer 150
 
-#assign programs to workspaces
+#assign programs to workspaces<p></p>
 for_window [class="chrome"] move container to workspace "1: web", workspace "1: web"
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
@@ -207,3 +207,5 @@ for_window [title="Osmos"] move container to workspace "7: game", workspace "7: 
 #exec compositor and background
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
 exec --no-startup-id ~/.fehbg
+exec --no-startup-id pkill redshift || sleep 3 && redshift -l 53.3756707:-2.3587521 -t 6500:3000
+exec --no-startup-id batwarn

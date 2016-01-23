@@ -59,6 +59,7 @@ unalias lsa
 alias mkdir='mkdir -p'
 unalias md
 alias cat=ccat
+alias grive='cd ~/media/drive && grive && cd ~'
 
 #thefuck
 eval $(thefuck --alias)
