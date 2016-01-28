@@ -67,3 +67,5 @@ TEXT
 {"full_text":"${time %a %d.%m.%y}","color":"\#eeeeee","separator":false,"separator_block_width":0},\
 {"full_text":"${time %H}${blink :}${time %M}","color":"\#eeeeee"}\
 ],
+
+
