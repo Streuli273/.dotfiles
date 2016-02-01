@@ -21,3 +21,7 @@ sets symlinks of `.config` and `.xinitrc` to `~`
 ####sources
 [dkeg](http://dotshare.it/~dkeg/) on dotshare.it for conky and i3 dots inspiration.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Streuli273/.dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
