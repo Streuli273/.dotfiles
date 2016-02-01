@@ -19,13 +19,6 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -120,26 +113,26 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -154,19 +147,26 @@ bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.2
 bindsym XF86AudioRaiseVolume exec amixer -c 0 set Speaker 1DB+ && amixer -c 0 set "Speaker Left" on && amixer -c 0 set "Speaker Right" on
 bindsym XF86AudioLowerVolume exec amixer -c 0 set Speaker 1DB-
 bindsym XF86AudioMute exec amixer -c 0 set Speaker 0% && amixer -c 0 set "Speaker Left" off && amixer -c 0 set "Speaker Right" off
+
+#brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 51
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+#mod+media keys
 bindsym $mod+XF86AudioRaiseVolume exec amixer -c 0 set Headphone 1DB+
 bindsym $mod+XF86AudioLowerVolume exec amixer -c 0 set Headphone 1DB-
 bindsym $mod+XF86AudioMute exec amixer -c 0 set Headphone 0%
+
+#mod+brightness
+bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1
+
+#ctrl+media|brightness
 bindsym Control+XF86AudioRaiseVolume exec amixer -c 0 set Headphone 1DB+
 bindsym Control+XF86AudioLowerVolume exec amixer -c 0 set Headphone 1DB-
 bindsym Control+XF86AudioMute exec amixer -c 0 set Headphone 0%
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1
 bindsym Control+XF86MonBrightnessDown exec xbacklight -set 1
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Start conky.sh to display a workspace bar
 bar {
 	status_command ~/.config/i3/conky.sh
 	tray_output none
@@ -186,6 +186,11 @@ bar {
 #no window borders
 new_window none
 
+#set Termite border pixel size
+for_window [class="Termite"] border pixel 1
+#focused winddow borders for Termite
+client.focused #cc5555 #cc5555 #cc5555 #cc5555
+
 #gaps for normal windows
 gaps inner 10
 gaps outer 10
@@ -193,10 +198,10 @@ gaps outer 10
 #special gaps
 workspace "1: web" gaps outer 0
 workspace "1: web" gaps inner 0
-workspace 2 gaps outer 150
+workspace "2: terms" gaps outer 150
 
-#assign programs to workspaces
-for_window [class="chrome"] move container to workspace "1: web", workspace "1: web"
+#assign programs to workspaces and move to that workspace
+for_window [class="google-chrome-unstable"] move container to workspace "1: web", workspace "1: web"
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
 for_window [class="transmission-gtk"] move container to workspace "3: media", workspace "3: media"
@@ -210,9 +215,8 @@ for_window [title="MiniMetro"] move container to workspace "7: game", workspace 
 for_window [title="Shattered Pixel Dungeon"] move container to workspace "7: game", workspace "7: game"
 for_window [title="Osmos"] move container to workspace "7: game", workspace "7: game"
 
-#exec compositor and background
+#exec things: compositor, background, redshift, batwarn
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id pkill redshift || sleep 3 && redshift -l 53.3756707:-2.3587521 -t 6500:3000
 exec --no-startup-id batwarn
-#exec --no-startup-id watch -n 60 pkill i3lock
