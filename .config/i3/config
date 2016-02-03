@@ -140,8 +140,8 @@ bindsym $mod+r mode "resize"
 #my keybinds
 bindsym $mod+d exec rofi -show run -font "inconsolata-g 9" -fg "#ffffff" -bg "#161616" -hlbg "#cc5555" -terminal termite -hide-scrollbar -opacity 80%
 bindsym $mod+x exec ~/.config/i3/lock.sh
-bindsym $mod+c exec google-chrome-unstable --force-device-scale-factor=1.25
-bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.25 --incognito
+bindsym $mod+c exec google-chrome-beta
+bindsym $mod+Shift+c exec google-chrome-beta --incognito
 
 #media keys
 bindsym XF86AudioRaiseVolume exec amixer -c 0 set Speaker 1DB+ && amixer -c 0 set "Speaker Left" on && amixer -c 0 set "Speaker Right" on
@@ -172,7 +172,7 @@ bar {
 	tray_output none
 	position top
 	mode dock
-	font pango:inconsolata-g 5
+	font pango:inconsolata-g 7
 	colors {
 	    background #161616
 	   	statusline #605c5a
@@ -182,6 +182,13 @@ bar {
 		urgent_workspace  	#161616 #4e4e4e	#ffffff
 	}
 }
+
+#workspaces to diplays
+workspace "1: web" output HDMI-0
+workspace "2: terms" output DVI-I-0
+workspace "3: media" output HDMI-0
+workspace "5: dev" output HDMI-0
+workspace "6: steam" output DVI-I-0  
 
 #no window borders
 new_window none
@@ -201,7 +208,7 @@ workspace "1: web" gaps inner 0
 workspace "2: terms" gaps outer 150
 
 #assign programs to workspaces and move to that workspace
-for_window [class="google-chrome-unstable"] move container to workspace "1: web", workspace "1: web"
+for_window [class="google-chrome-beta"] move container to workspace "1: web", workspace "1: web"
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
 for_window [class="transmission-gtk"] move container to workspace "3: media", workspace "3: media"

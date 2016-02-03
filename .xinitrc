@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 userresources=$HOME/.Xresources
@@ -39,6 +40,6 @@ fi
 
 setxkbmap gb
 
-xrandr --dpi 165
+xrandr --output DVI-I-0 --auto --output HDMI-0 --auto --primary --left-of DVI-I-0
 
 exec i3
