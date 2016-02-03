@@ -144,8 +144,8 @@ bindsym $mod+c exec google-chrome-beta
 bindsym $mod+Shift+c exec google-chrome-beta --incognito
 
 #media keys
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1DB+
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1DB-
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 2 false && pactl set-sink-volume 2 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-mute 2 false && pactl -- set-sink-volume 2 -5%
 
 # Start conky.sh to display a workspace bar
 bar {
@@ -195,7 +195,7 @@ for_window [class="mpv"] move container to workspace "3: media", workspace "3: m
 for_window [class="transmission-gtk"] move container to workspace "3: media", workspace "3: media"
 for_window [class="Thunar"] move container to workspace "4: files", workspace "4: files"
 for_window [class="Subl3"] move container to workspace "5: dev", workspace "5: dev"
-for_window [title="nano"] move container to workspace "5: dev", workspace "5: dev"
+for_window [class="jetbrains-studio"] move container to workspace "5: dev", workspace "5: dev"
 for_window [title="Steam"] move container to workspace "6: steam"
 for_window [title="Hexcells"] move container to workspace "7: game", workspace "7: game" 
 for_window [title="Gunpoint"] move container to workspace "7: game", workspace "7: game"
@@ -204,7 +204,7 @@ for_window [title="Shattered Pixel Dungeon"] move container to workspace "7: gam
 for_window [title="Osmos"] move container to workspace "7: game", workspace "7: game"
 
 #exec things: compositor, background, redshift, batwarn
-exec --no-startup-id compton --config ~/.config/i3/compton.conf
+exec --no-startup-id compton --vsync opengl --config ~/.config/i3/compton.conf
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id pkill redshift || sleep 3 && redshift -l 53.3756707:-2.3587521 -t 6500:3000
 exec --no-startup-id batwarn

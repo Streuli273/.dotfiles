@@ -41,8 +41,8 @@ TEXT
 {"full_text":"temp","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${exec sensors | grep 'Core 0' | cut -c18-19}°C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c18-19}>48}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
 \
-{"full_text":"speaker","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec amixer -c 0 get Master -M | grep 'Mono'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
+{"full_text":"volume","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"${exec pamixer --sink 2 --get-volume}%","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
 {"full_text":"weather","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${execi 300 /home/streuli/.config/i3/weather.sh altrincham}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
