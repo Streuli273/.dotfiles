@@ -26,36 +26,36 @@ border_outer_margin 0
 
 TEXT
 [
-{"full_text":"ssd","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"ssd ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${fs_free /}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"hdd","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"hdd ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${fs_free /media/Storage/}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"ram","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"ram ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${memperc}%","color":${if_match ${memperc}>40}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10 },\
 \
-{"full_text":"cpu","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"cpu ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${cpu}%","color":${if_match ${cpu}>25}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
 \
-{"full_text":"temp","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"temp ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${exec sensors | grep 'Core 0' | cut -c18-19}°C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c18-19}>48}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":10},\
 \
-{"full_text":"volume","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"volume ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${exec pamixer --sink 2 --get-volume}%","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"weather","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"weather ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${execi 300 /home/streuli/.config/i3/weather.sh altrincham}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"net","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"net ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${upspeedf enp3s0}KB up ${downspeedf enp3s0}KB dwn","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"uptime","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"uptime ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${uptime_short}","color":"\#eeeeee","separator":false,"separator_block_width":10},\
 \
-{"full_text":"time","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"time ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${time %a %d.%m.%y}","color":"\#eeeeee","separator":false,"separator_block_width":0},\
-{"full_text":"${time %H}${blink :}${time %M}","color":"\#eeeeee"}\
+{"full_text":" ${time %H}${blink :}${time %M}","color":"\#eeeeee"}\
 ],
 
 

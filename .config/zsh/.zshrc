@@ -31,7 +31,6 @@ antigen bundle git
 antigen bundle rimraf/k
 
 # themes
-
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
