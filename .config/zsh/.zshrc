@@ -65,6 +65,7 @@ alias mkdir='mkdir -p'
 unalias md
 alias cat=ccat
 alias grive='cd ~/media/drive && grive && cd ~'
+alias update='pacaur -Syu'
 
 #thefuck
 eval $(thefuck --alias)

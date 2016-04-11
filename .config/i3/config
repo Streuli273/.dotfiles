@@ -144,28 +144,19 @@ bindsym $mod+c exec google-chrome-unstable --force-device-scale-factor=1.25
 bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.25 --incognito
 bindsym $mod+m exec google-play-music-desktop-player --force-device-scale-factor=1.25
 
-
 #media keys
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Speaker 1DB+ && amixer -c 0 set "Speaker Left" on && amixer -c 0 set "Speaker Right" on
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Speaker 1DB-
-bindsym XF86AudioMute exec amixer -c 0 set Speaker 0% && amixer -c 0 set "Speaker Left" off && amixer -c 0 set "Speaker Right" off
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 1 0 && pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 1 1
 
 #brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-#mod+media keys
-bindsym $mod+XF86AudioRaiseVolume exec amixer -c 0 set Headphone 1DB+
-bindsym $mod+XF86AudioLowerVolume exec amixer -c 0 set Headphone 1DB-
-bindsym $mod+XF86AudioMute exec amixer -c 0 set Headphone 0%
-
 #mod+brightness
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1
 
-#ctrl+media|brightness
-bindsym Control+XF86AudioRaiseVolume exec amixer -c 0 set Headphone 1DB+
-bindsym Control+XF86AudioLowerVolume exec amixer -c 0 set Headphone 1DB-
-bindsym Control+XF86AudioMute exec amixer -c 0 set Headphone 0%
+#ctrl+brightness
 bindsym Control+XF86MonBrightnessDown exec xbacklight -set 1
 
 # Start conky.sh to display a workspace bar

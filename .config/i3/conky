@@ -41,14 +41,11 @@ TEXT
 {"full_text":"temp ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${exec sensors | grep 'Core 0' | cut -c16-17}°C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c16-17}>48}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":15},\
 \
-{"full_text":"speaker ","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec amixer -c 0 get Speaker -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":15},\
-\
-{"full_text":"headphone ","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${exec amixer -c 0 get Headphone -M | grep 'Left'| grep -oE "[[:digit:]]*%"}","color":"\#eeeeee","separator":false,"separator_block_width":15},\
+{"full_text":"vol ","color":"\#888888","separator":false,"separator_block_width":0},\
+{"full_text":"${if_match ${exec pulsemixer --get-mute 1}==1}[M]${else}${exec pulsemixer --get-volume 1 | cut -d " " -f1}%${endif}","color":"\#eeeeee","separator":false,"separator_block_width":15},\
 \
 {"full_text":"bat ","color":"\#888888","separator":false,"separator_block_width":0},\
-{"full_text":"${battery_short}","color":${if_match ${battery_percent}>25}"\#eeeeee"${else}"\#bf3f34"${endif},"separator":false,"separator_block_width":15},\
+{"full_text":"${battery_short}","color":${if_match ${battery_percent}>25}"\#eeeeee"${else}"\#cc5555"${endif},"separator":false,"separator_block_width":15},\
 \
 {"full_text":"weather ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${execi 300 /home/streuli/.config/i3/weather.sh altrincham}","color":"\#eeeeee","separator":false,"separator_block_width":15},\
@@ -58,7 +55,7 @@ TEXT
 \
 {"full_text":"wifi ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${addr wlp1s0}","color":"\#eeeeee","separator":false,"separator_block_width":0},\
-{"full_text":"${wireless_link_qual_perc wlp1s0}%","color":${if_match ${wireless_link_qual_perc wlp1s0}<50}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":15},\
+{"full_text":" ${wireless_link_qual_perc wlp1s0}%","color":${if_match ${wireless_link_qual_perc wlp1s0}<50}"\#cc5555"${else}"\#eeeeee"${endif},"separator":false,"separator_block_width":15},\
 \
 {"full_text":"uptime ","color":"\#888888","separator":false,"separator_block_width":0},\
 {"full_text":"${uptime_short}","color":"\#eeeeee","separator":false,"separator_block_width":15},\
