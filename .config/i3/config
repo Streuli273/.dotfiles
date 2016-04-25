@@ -138,26 +138,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #my keybinds
-bindsym $mod+d exec rofi -show run -font "inconsolata-g 9" -fg "#ffffff" -bg "#161616" -hlbg "#cc5555" -terminal termite -hide-scrollbar -opacity 80%
+bindsym $mod+d exec rofi -show run -font "inconsolata-g 9" -fg "#ffffff" -bg "#181818" -hlbg "#AB46425" -terminal termite -hide-scrollbar -opacity 80%
 bindsym $mod+x exec ~/.config/i3/lock.sh
 bindsym $mod+c exec google-chrome-unstable --force-device-scale-factor=1.25
 bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.25 --incognito
 bindsym $mod+m exec google-play-music-desktop-player --force-device-scale-factor=1.25
 
 #media keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 1 0 && pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 1 1
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 1
+#control+media
+bindsym Control+XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +1%
+bindsym Control+XF86AudioLowerVolume exec pactl set-sink-volume 0 -1%
 
 #brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-
+#cotrol+brightness
+bindsym Control+XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym Control+XF86MonBrightnessDown exec xbacklight -dec 1
 #mod+brightness
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1
-
-#ctrl+brightness
-bindsym Control+XF86MonBrightnessDown exec xbacklight -set 1
 
 # Start conky.sh to display a workspace bar
 bar {
@@ -167,12 +169,12 @@ bar {
 	mode dock
 	font pango:inconsolata-g 5
 	colors {
-	    background #161616
+	    background #181818
 	   	statusline #605c5a
-		focused_workspace	#161616	#cc5555	#eeeeee
-  		active_workspace	#161616 #161616	#ffffff
-  		inactive_workspace	#161616 #4e4e4e	#ffffff
-		urgent_workspace  	#161616 #4e4e4e	#ffffff
+		focused_workspace	#181818	#AB4642	#f8f8f8
+  		active_workspace	#181818 #161616	#ffffff
+  		inactive_workspace	#181818 #585858	#ffffff
+		urgent_workspace  	#181818 #585858	#ffffff
 	}
 }
 
@@ -182,7 +184,7 @@ new_window none
 #set Termite border pixel size
 for_window [class="Termite"] border pixel 1
 #focused winddow borders for Termite
-client.focused #cc5555 #cc5555 #cc5555 #cc5555
+client.focused #AB4642 #AB4642 #AB4642 #AB4642
 
 #gaps for normal windows
 gaps inner 10
@@ -202,8 +204,9 @@ for_window [class="transmission-gtk"] move container to workspace "3: media", wo
 for_window [class="Thunar"] move container to workspace "4: files", workspace "4: files"
 for_window [class="Subl3"] move container to workspace "5: dev", workspace "5: dev"
 for_window [title="nano"] move container to workspace "5: dev", workspace "5: dev"
+for_window [title="nvim"] move container to workspace "5: dev", workspace "5: dev"
 for_window [class="Steam"] move container to workspace "6: steam"
-for_window [title="Hexcells"] move container to workspace "7: game", workspace "7: game" 
+for_window [title="Hexcells"] move container to workspace "7: game", workspace "7: game"
 for_window [title="Gunpoint"] move container to workspace "7: game", workspace "7: game"
 for_window [title="MiniMetro"] move container to workspace "7: game", workspace "7: game"
 for_window [title="Shattered Pixel Dungeon"] move container to workspace "7: game", workspace "7: game"
