@@ -77,3 +77,5 @@ eval $(thefuck --alias)
 #ls colors
 eval $(dircolors -b $HOME/.config/zsh/LS_COLORS1)
 
+
+fortune -s | cowthink -f $(find /usr/share/cows -type f | shuf -n 1) | lolcat
