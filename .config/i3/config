@@ -138,7 +138,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #my keybinds
-bindsym $mod+d exec rofi -show run -font "inconsolata-g 9" -fg "#ffffff" -bg "#161616" -hlbg "#cc5555" -terminal termite -hide-scrollbar -opacity 80%
+bindsym $mod+d exec ~/.config/i3/rofi.sh
 bindsym $mod+x exec ~/.config/i3/lock.sh
 bindsym $mod+c exec google-chrome-beta
 bindsym $mod+Shift+c exec google-chrome-beta --incognito
@@ -160,12 +160,12 @@ bar {
 	mode dock
 	font pango:inconsolata-g 7
 	colors {
-	    background #161616
+	    background #181818
 	   	statusline #605c5a
-		focused_workspace	#161616	#cc5555	#eeeeee
-  		active_workspace	#161616 #161616	#ffffff
-  		inactive_workspace	#161616 #4e4e4e	#ffffff
-		urgent_workspace  	#161616 #4e4e4e	#ffffff
+		focused_workspace	#181818	#AB4642	#f8f8f8
+  		active_workspace	#181818 #161616	#ffffff
+  		inactive_workspace	#181818 #585858	#ffffff
+		urgent_workspace  	#181818 #585858	#ffffff
 	}
 }
 

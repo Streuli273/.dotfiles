@@ -15,6 +15,10 @@ compinit
 ####### START #######
 #####################
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # ANTIGEN
 
 export ADOTDIR=$HOME/.config/zsh/antigen
@@ -71,3 +75,5 @@ eval $(thefuck --alias)
 
 #ls colors
 eval $(dircolors -b $HOME/.config/zsh/LS_COLORS)
+
+fortune -s | cowthink -f $(find /usr/share/cows -type f | shuf -n 1) | lolcat
