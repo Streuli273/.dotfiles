@@ -40,7 +40,7 @@ TEXT
 {"full_text":"${exec sensors | grep 'Core 0' | cut -c16-17}°C","color":${if_match ${exec sensors | grep 'Core 0' | cut -c16-17}>48}"\#AB4642"${else}"\#f8f8f8"${endif},"separator":false,"separator_block_width":15},\
 \
 {"full_text":"vol ","color":"\#585858","separator":false,"separator_block_width":0},\
-{"full_text":"${if_match ${exec pulsemixer --get-mute 0}==1}[M]${else}${exec pulsemixer --get-volume 0 | cut -d " " -f1}%${endif}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
+{"full_text":"${if_match ${exec pulsemixer --get-mute}==1}[M]${else}${exec pulsemixer --get-volume | cut -d " " -f1}%${endif}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
 \
 {"full_text":"bl ","color":"\#585858","separator":false,"separator_block_width":0},\
 {"full_text":"${exec printf "%.0f\n" $(exec xbacklight -get)}%","color":"\#f8f8f8","separator":false,"separator_block_width":15},\

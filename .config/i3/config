@@ -145,12 +145,12 @@ bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.2
 bindsym $mod+m exec google-play-music-desktop-player --force-device-scale-factor=1.25
 
 #media keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec pactl set-sink-mute 0 1
+bindsym XF86AudioRaiseVolume exec pulsemixer --unmute +5 && pulsemixer --change-volume +5
+bindsym XF86AudioLowerVolume exec pulsemixer --change-volume -5
+bindsym XF86AudioMute exec pulsemixer --mute
 #control+media
-bindsym Control+XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +1%
-bindsym Control+XF86AudioLowerVolume exec pactl set-sink-volume 0 -1%
+bindsym Control+XF86AudioRaiseVolume exec pulsemixer --change-volume +1 && pulsemixer --unmute
+bindsym Control+XF86AudioLowerVolume exec pulsemixer --change-volume -1
 
 #brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -211,6 +211,7 @@ for_window [title="Gunpoint"] move container to workspace "7: game", workspace "
 for_window [title="MiniMetro"] move container to workspace "7: game", workspace "7: game"
 for_window [title="Shattered Pixel Dungeon"] move container to workspace "7: game", workspace "7: game"
 for_window [title="Osmos"] move container to workspace "7: game", workspace "7: game"
+for_window [title="pyrogenesis"] move container to workspace "7: game", workspace "7: game"
 
 #exec things: compositor, background, redshift, batwarn
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
