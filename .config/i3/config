@@ -140,8 +140,8 @@ bindsym $mod+r mode "resize"
 #my keybinds
 bindsym $mod+d exec ~/.config/i3/rofi.sh
 bindsym $mod+x exec ~/.config/i3/lock.sh
-bindsym $mod+c exec google-chrome-unstable --force-device-scale-factor=1.25
-bindsym $mod+Shift+c exec google-chrome-unstable --force-device-scale-factor=1.25 --incognito
+bindsym $mod+c exec google-chrome-unstable
+bindsym $mod+Shift+c exec google-chrome-unstable --incognito
 bindsym $mod+m exec google-play-music-desktop-player --force-device-scale-factor=1.25
 
 #media keys
@@ -160,6 +160,9 @@ bindsym Control+XF86MonBrightnessUp exec xbacklight -inc 1
 bindsym Control+XF86MonBrightnessDown exec xbacklight -dec 1
 #mod+brightness
 bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 1
+
+bindsym XF86KbdBrightnessUp exec kbdlight up 5
+bindsym XF86KbdBrightnessDown exec kbdlight down 5
 
 # Start conky.sh to display a workspace bar
 bar {

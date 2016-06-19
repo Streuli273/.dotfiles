@@ -37,10 +37,8 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 
-setxkbmap gb
+# setxkbmap gb
 
-xrandr --dpi 165
-
-pacmd set-default-sink "alsa_output.usb-CA_CA_DacMagicXS_2.0-00.analog-stereo"
+# xrandr --dpi 165
 
 exec i3

@@ -24,11 +24,11 @@ border_outer_margin 0
 
 TEXT
 [
-{"full_text":"emmc ","color":"\#585858","separator":false,"separator_block_width":0},\
+{"full_text":"root ","color":"\#585858","separator":false,"separator_block_width":0},\
 {"full_text":"${fs_free /}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
 \
-{"full_text":"sd ","color":"\#585858","separator":false,"separator_block_width":0},\
-{"full_text":"${fs_free /home/streuli/media}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
+{"full_text":"home ","color":"\#585858","separator":false,"separator_block_width":0},\
+{"full_text":"${fs_free /home/streuli/}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
 \
 {"full_text":"ram ","color":"\#585858","separator":false,"separator_block_width":0},\
 {"full_text":"${memperc}%","color":${if_match ${memperc}>40}"\#AB4642"${else}"\#f8f8f8"${endif},"separator":false,"separator_block_width":15},\
@@ -52,11 +52,11 @@ TEXT
 {"full_text":"${execi 300 /home/streuli/.config/i3/weather.sh altrincham}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
 \
 {"full_text":"net ","color":"\#585858","separator":false,"separator_block_width":0},\
-{"full_text":"${upspeedf wlp1s0}KB up ${downspeedf wlp1s0}KB dwn","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
+{"full_text":"${upspeedf wls3}KB up ${downspeedf wls3}KB dwn","color":"\#f8f8f8","separator":false,"separator_block_width":15},\
 \
 {"full_text":"wifi ","color":"\#585858","separator":false,"separator_block_width":0},\
-{"full_text":"${addr wlp1s0}","color":"\#f8f8f8","separator":false,"separator_block_width":0},\
-{"full_text":" ${wireless_link_qual_perc wlp1s0}%","color":${if_match ${wireless_link_qual_perc wlp1s0}<50}"\#AB4642"${else}"\#f8f8f8"${endif},"separator":false,"separator_block_width":15},\
+{"full_text":"${addr wls3}","color":"\#f8f8f8","separator":false,"separator_block_width":0},\
+{"full_text":" ${wireless_link_qual_perc wls3}%","color":${if_match ${wireless_link_qual_perc wls3}<50}"\#AB4642"${else}"\#f8f8f8"${endif},"separator":false,"separator_block_width":15},\
 \
 {"full_text":"uptime ","color":"\#585858","separator":false,"separator_block_width":0},\
 {"full_text":"${uptime_short}","color":"\#f8f8f8","separator":false,"separator_block_width":15},\

@@ -75,6 +75,6 @@ alias update='pacaur -Syu'
 eval $(thefuck --alias)
 
 #ls colors
-eval $(dircolors -b $HOME/.config/zsh/LS_COLORS1)
+eval $(dircolors -b $HOME/.config/zsh/LS_COLORS)
 
 fortune -s | cowthink -f $(find /usr/share/cows -type f | shuf -n 1) | lolcat
