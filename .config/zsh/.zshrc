@@ -23,7 +23,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 export ADOTDIR=$HOME/.config/zsh/antigen
 
-source /usr/share/zsh/scripts/antigen/antigen.zsh
+source $HOME/.config/zsh/antigengh/antigen.zsh
 antigen use oh-my-zsh
 
 # plugins
@@ -32,7 +32,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle thefuck
 antigen bundle extract
 antigen bundle git
-antigen bundle rimraf/k
+antigen bundle supercrabtree/k
 
 # themes
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -76,4 +76,4 @@ eval $(thefuck --alias)
 #ls colors
 eval $(dircolors -b $HOME/.config/zsh/LS_COLORS)
 
-fortune -s | cowthink -f $(find /usr/share/cows -type f | shuf -n 1) | lolcat
+# fortune -s | cowthink -f $(find /usr/share/cows -type f | shuf -n 1) | lolcat
