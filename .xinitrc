@@ -39,8 +39,8 @@ fi
 
 setxkbmap gb
 
-xrandr --dpi 165
-
 pacmd set-default-sink "alsa_output.usb-CA_CA_DacMagicXS_2.0-00.analog-stereo"
+
+xrdb -merge ~/.Xresources
 
 exec i3

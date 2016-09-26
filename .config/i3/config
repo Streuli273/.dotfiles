@@ -196,7 +196,7 @@ workspace "1: web" gaps inner 0
 workspace "2: terms" gaps outer 150
 
 #assign programs to workspaces and move to that workspace
-for_window [class="google-chrome-unstable"] move container to workspace "1: web", workspace "1: web"
+for_window [class="Google-chrome-unstable"] move container to workspace "1: web", workspace "1: web"
 for_window [class="Termite"] move container to workspace "2: terms", workspace "2: terms"
 for_window [class="mpv"] move container to workspace "3: media", workspace "3: media"
 for_window [class="Google Play Music Desktop Player"] move container to workspace "3: media", workspace "3: media"
