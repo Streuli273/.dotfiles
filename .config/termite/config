@@ -1,5 +1,7 @@
 [options]
 font = inconsolata-g 10
+scrollback_lines = 100000
+
 
 [colors]
 # Base16 Default
